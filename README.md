@@ -1,1 +1,1 @@
-# Barber-shop
+# BarberShop
