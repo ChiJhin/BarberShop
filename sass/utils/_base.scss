@@ -1,0 +1,26 @@
+.container {
+    padding-left: 31px;
+    padding-right: 31px;
+    margin: 0 auto;
+    width: 100%;
+
+    @include min-mobile {
+       width: 480px;
+    }
+    @include min-tablet {
+        width: 768px;
+    }
+    @include min-desktop {
+        
+        width: 1200px;
+    }
+    
+}
+
+.mobile {
+    max-width: 375px;
+}
+
+.border {
+    outline: 1px solid tomato;
+}

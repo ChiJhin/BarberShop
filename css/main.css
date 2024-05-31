@@ -1,5 +1,18 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+}
+
 ol, ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -13,6 +26,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -26,17 +41,75 @@ img {
   width: 1px;
 }
 
+.container {
+  padding-left: 31px;
+  padding-right: 31px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.mobile {
+  max-width: 375px;
+}
+
+.border {
+  outline: 1px solid tomato;
+}
+
 .logo {
   width: 68.93px;
   height: 55.46px;
   fill: black;
 }
 
-.container {
-  max-width: 1170px;
-}
-
 .soc__icon {
   width: 20px;
   height: 20px;
+}
+
+.mob__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  transform: translateX(0%);
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2784313725);
+  overflow-y: hidden;
+}
+
+.header {
+  height: 580px;
+  background-image: url("../../images/slider-3.jpg");
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 680px;
+  }
 }/*# sourceMappingURL=main.css.map */
