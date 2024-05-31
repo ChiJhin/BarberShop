@@ -105,7 +105,7 @@ img {
 
 .header {
   height: 580px;
-  background-image: url("../../images/slider-3.jpg");
+  background-image: url("../images/slider-3.jpg");
   background-size: cover;
 }
 @media screen and (min-width: 768px) {
