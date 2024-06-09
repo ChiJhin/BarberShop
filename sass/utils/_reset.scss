@@ -1,13 +1,20 @@
-/* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
-  display: none;
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-html {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth;
+@media screen and (max-width: 769px) {
+  /* Заховати scrollbar для Chrome, Safari та Opera */
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Заховати scrollbar для IE, Edge та Firefox */
+  html {
+    -ms-overflow-style: none; /* IE та Edge */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+  }
 }
 
 body {

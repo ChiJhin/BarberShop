@@ -1,26 +1,61 @@
 .container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include min-mobile {
     padding-left: 31px;
     padding-right: 31px;
-    margin: 0 auto;
-    width: 100%;
+    width: 480px;
+  }
+  @include min-tablet {
+    width: 768px;
+  }
+  @include min-desktop {
+    width: 1200px;
+  }
+}
+main .container {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
 
-    @include min-mobile {
-       width: 480px;
-    }
-    @include min-tablet {
-        width: 768px;
-    }
-    @include min-desktop {
-        
-        width: 1200px;
-    }
-    
+main .container:first-child {
+  padding-top: 84px;
+  padding-bottom: 42px;
+}
+
+main .container:last-child {
+  padding-top: 42px;
+  padding-bottom: 84px;
 }
 
 .mobile {
-    max-width: 375px;
+  max-width: 375px;
 }
 
 .border {
-    outline: 1px solid tomato;
+  outline: 1px solid tomato;
+}
+
+.section-line {
+  display: block;
+  height: 1px;
+  width: 60px;
+  border-radius: 30px;
+  background-color: $mainColor;
+}
+
+.btn {
+  padding: 12px 20px;
+  max-width: 160px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 25px;
+  background-color: inherit;
+  cursor: pointer;
+  &--light {
+    border: 1px solid $subColor;
+  }
 }

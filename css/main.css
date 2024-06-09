@@ -1,15 +1,21 @@
-/* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
+@charset "UTF-8";
 html {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 769px) {
+  /* Заховати scrollbar для Chrome, Safari та Opera */
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  /* Заховати scrollbar для IE, Edge та Firefox */
+  html {
+    -ms-overflow-style: none; /* IE та Edge */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
@@ -66,13 +72,15 @@ button {
 }
 
 .container {
-  padding-left: 31px;
-  padding-right: 31px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
   width: 100%;
 }
 @media screen and (min-width: 480px) {
   .container {
+    padding-left: 31px;
+    padding-right: 31px;
     width: 480px;
   }
 }
@@ -87,6 +95,21 @@ button {
   }
 }
 
+main .container {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+main .container:first-child {
+  padding-top: 84px;
+  padding-bottom: 42px;
+}
+
+main .container:last-child {
+  padding-top: 42px;
+  padding-bottom: 84px;
+}
+
 .mobile {
   max-width: 375px;
 }
@@ -95,9 +118,39 @@ button {
   outline: 1px solid tomato;
 }
 
+.section-line {
+  display: block;
+  height: 1px;
+  width: 60px;
+  border-radius: 30px;
+  background-color: #303030;
+}
+
+.btn {
+  padding: 12px 20px;
+  max-width: 160px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 25px;
+  background-color: inherit;
+  cursor: pointer;
+}
+.btn--light {
+  border: 1px solid #ff6c00;
+}
+
 .logo {
   width: 68.93px;
   height: 55.46px;
+}
+
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+.is-hidden.header__modal {
+  transform: translateX(150%);
 }
 
 .backdrop {
@@ -106,42 +159,42 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2784313725);
   overflow-y: hidden;
 }
 
-.menu__mob {
+.header__modal {
   z-index: 555;
   position: absolute;
   top: 0;
   right: 0;
   width: 70%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform: translateX(0%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid black;
   background-color: #fff;
+  padding: 50px 31px;
 }
-.menu__mob-btn {
+.header__modal-btn {
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: inherit;
-  margin-left: 75%;
+  margin-left: auto;
 }
-.menu__mob-btn:hover {
+.header__modal-btn:hover {
   scale: 1.1;
 }
-.menu__mob-btn-icon {
+.header__modal-btn-icon {
   width: 35px;
   height: 35px;
   fill: #000;
 }
-.menu__mob-box {
+.header__modal-box {
   max-width: 400px;
 }
 
@@ -154,13 +207,26 @@ button {
   padding-top: 40px;
 }
 .header__main {
-  width: 100%;
+  width: 320px;
+  margin-top: 112px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: start;
+  gap: 20px;
 }
-.header__menu-btn {
+.header__main-text {
+  color: #9da4bd;
+  font-weight: 400;
+  font-size: 16px;
+}
+.header__main-text--inherit {
+  color: rgba(157, 164, 189, 0.6);
+}
+.header__main-title {
+  font-weight: 700;
+  font-size: 48px;
+}
+.header__mobile-btn {
   width: 40px;
   height: 40px;
   display: flex;
@@ -168,15 +234,15 @@ button {
   justify-content: center;
   background-color: inherit;
 }
-.header__menu-btn:hover {
+.header__mobile-btn:hover {
   scale: 1.1;
 }
-.header__menu-btn-icon {
+.header__mobile-btn-icon {
   width: 35px;
   height: 35px;
   fill: #fff;
 }
-.header__box {
+.header__mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,4 +267,43 @@ button {
 .barbers__prifile-icon {
   width: 20px;
   height: 20px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about__main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about__images {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .about__images {
+    display: block;
+  }
+}
+.about__sub-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+.about__title {
+  max-width: 306px;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+.about__text {
+  font-size: 16px;
+}
+.about__sub-text {
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */

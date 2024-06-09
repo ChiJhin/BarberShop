@@ -1,24 +1,29 @@
 'use strict';
-
-const menuOpen = document.querySelector('.header__menu-btn');
-const menuClose = document.querySelector('.menu__mob-btn');
-const menu = document.querySelector('.menu__mob');
+// <-------------Зміні для модального вікна------------------>
+const menuOpen = document.querySelector('.header__mobile-btn');
+const menuClose = document.querySelector('.header__modal-btn');
+const menu = document.querySelector('.header__modal');
 const backdrop = document.querySelector('.backdrop');
+const ESC_KEY_CODE = 'Escape';
+
+// <-------------Функції для модального вікна------------------>
 
 function onOpen() {
-  menu.classList.remove('visually-hidden');
-  backdrop.classList.remove('visually-hidden');
+  menu.classList.remove('is-hidden');
+  backdrop.classList.remove('is-hidden');
   document.body.style.overflow = 'hidden';
   backdrop.addEventListener('click', onBackdrop);
   menu.addEventListener('click', onButton);
+  window.addEventListener('keydown', onEscKeyPress);
 }
 
 function onClose() {
-  menu.classList.add('visually-hidden');
-  backdrop.classList.add('visually-hidden');
+  menu.classList.add('is-hidden');
+  backdrop.classList.add('is-hidden');
   document.body.style.overflow = 'scroll';
   backdrop.removeEventListener('click', onBackdrop);
   menu.removeEventListener('click', onButton);
+  window.removeEventListener('keydown', onEscKeyPress);
 }
 
 function onButton(evt) {
@@ -37,5 +42,13 @@ function onBackdrop(evt) {
   onClose();
 }
 
+function onEscKeyPress(event) {
+  const isEscCode = event.code === ESC_KEY_CODE;
+  if (isEscCode) {
+    onClose();
+  }
+}
+
+// <-------------Підключення слухачів для модального вікна------------------>
 menuOpen.addEventListener('click', onOpen);
 menuClose.addEventListener('click', onClose);
