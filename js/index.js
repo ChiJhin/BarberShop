@@ -11,7 +11,7 @@ const ESC_KEY_CODE = 'Escape';
 function onOpen() {
   menu.classList.remove('is-hidden');
   backdrop.classList.remove('is-hidden');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflowY = 'hidden';
   backdrop.addEventListener('click', onBackdrop);
   menu.addEventListener('click', onButton);
   window.addEventListener('keydown', onEscKeyPress);
@@ -20,7 +20,7 @@ function onOpen() {
 function onClose() {
   menu.classList.add('is-hidden');
   backdrop.classList.add('is-hidden');
-  document.body.style.overflow = 'scroll';
+  document.body.style.overflowY = 'scroll';
   backdrop.removeEventListener('click', onBackdrop);
   menu.removeEventListener('click', onButton);
   window.removeEventListener('keydown', onEscKeyPress);

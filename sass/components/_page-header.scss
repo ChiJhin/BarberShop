@@ -13,8 +13,10 @@
     justify-content: start;
     gap: 20px;
     &-text {
+      display: flex;
+      align-items: center;
+      gap: 20px;
       color: $textColor;
-
       font-weight: 400;
       font-size: 16px;
       &--inherit {
