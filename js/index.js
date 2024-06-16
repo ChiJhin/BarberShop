@@ -1,4 +1,3 @@
-'use strict';
 // <-------------Зміні для модального вікна------------------>
 const menuOpen = document.querySelector('.header__mobile-btn');
 const menuClose = document.querySelector('.header__modal-btn');

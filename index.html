@@ -10,19 +10,20 @@
       type="image/svg+xml"
       href="images/razor-hair-salon-tool-svgrepo-com.svg"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./css/main.min.css" />
-    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header class="header border container">
@@ -37,32 +38,35 @@
             <use href="./images/logo-barberShop.svg#icon-menu"></use>
           </svg>
         </button>
-        <div class="backdrop is-hidden"></div>
-        <div class="header__modal is-hidden">
-          <button class="header__modal-btn">
-            <svg class="header__modal-btn-icon">
-              <use href="./images/logo-barberShop.svg#icon-cross"></use>
-            </svg>
-          </button>
-          <nav>
-            <ul>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#services">Services and prices</a>
-              </li>
-              <li>
-                <a href="#barbers">Barbers</a>
-              </li>
-              <li>
-                <a href="#contacts">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-          <div>
-            <a href="tel:+38 044 111 11 11">+38 044 111 11 11</a>
-            <button type="button">online-booking</button>
+        <div class="backdrop is-hidden">
+          <div class="container">
+            <div class="header__modal">
+              <button class="header__modal-btn">
+                <svg class="header__modal-btn-icon">
+                  <use href="./images/logo-barberShop.svg#icon-cross"></use>
+                </svg>
+              </button>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#services">Services and prices</a>
+                  </li>
+                  <li>
+                    <a href="#barbers">Barbers</a>
+                  </li>
+                  <li>
+                    <a href="#contacts">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+              <div>
+                <a href="tel:+38 044 111 11 11">+38 044 111 11 11</a>
+                <button type="button">online-booking</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -379,4 +383,5 @@
       <p>&#169;Copyright 2020</p>
     </footer>
   </body>
+  <script src="./js/index.js"></script>
 </html>

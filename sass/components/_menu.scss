@@ -3,7 +3,7 @@
   pointer-events: none;
   opacity: 0;
   &.header__modal {
-    transform: translateX(150%);
+    transform: translateX(100%);
   }
 }
 
@@ -17,6 +17,10 @@
   transition: opacity $time $speed, visibility $time $speed;
   background-color: #00000047;
   overflow-y: hidden;
+  & .container {
+    padding: 0;
+    position: relative;
+  }
 }
 
 .header__modal {
