@@ -36,10 +36,13 @@
   &__price-item {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    gap: 4px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
-  &__price-item:not(:last-child) {
-    margin-bottom: 20px;
-  }
+
   & .btn {
     margin: 0 auto;
   }

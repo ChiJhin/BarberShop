@@ -37,6 +37,12 @@
   }
 }
 
+.line {
+  flex-grow: 1;
+  border-bottom: 1px solid $mainColor;
+  margin: 5px;
+}
+
 .btn {
   display: block;
   text-align: center;
