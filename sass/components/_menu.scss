@@ -56,18 +56,6 @@
     gap: 19px;
     margin-bottom: 69px;
   }
-  & a {
-    font-size: 18px;
-    font-weight: 600;
-    width: auto;
-    color: #000;
-    &:hover {
-      color: $subColor;
-    }
-    &:focus {
-      color: $subColor;
-    }
-  }
 
   &-btn {
     position: relative;
@@ -99,9 +87,28 @@
     flex-wrap: wrap;
     gap: 35px;
     width: 168px;
-    & a {
-      font-size: 14px;
-      font-weight: 600;
+  }
+  &-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    &:hover {
+      color: $subColor;
     }
+    &:focus {
+      color: $subColor;
+    }
+  }
+}
+.mobile-link {
+  font-size: 18px;
+  font-weight: 600;
+  width: auto;
+  color: #000;
+  &:hover {
+    color: $subColor;
+  }
+  &:focus {
+    color: $subColor;
   }
 }

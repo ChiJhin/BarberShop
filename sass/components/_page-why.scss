@@ -16,23 +16,33 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    @media screen and (max-width: 479px) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 30px;
+      margin: auto;
+      width: 193px;
+    }
   }
   &__item {
     width: 193px;
     padding: 20px 36px;
     background-color: #f7f7f7;
-    &:nth-child(odd) {
-      margin-right: 30px;
+    @include min-mobile {
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+
+      &:nth-child(even) {
+        position: relative;
+        top: 30px;
+      }
     }
 
-    &:nth-child(-n + 2) {
-      margin-bottom: 30px;
-    }
-
-    &:nth-child(even) {
-      position: relative;
-      top: 30px;
-    }
     &-number {
       display: flex;
       align-items: start;
