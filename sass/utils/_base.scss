@@ -23,7 +23,7 @@
 }
 
 .border {
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
 }
 
 .section-line {
@@ -47,7 +47,7 @@
   display: block;
   text-align: center;
   padding: 12px 20px;
-  max-width: 160px;
+  width: 160px;
   height: 40px;
   font-size: 12px;
   font-weight: 600;
@@ -64,5 +64,41 @@
   &:hover {
     background-color: $subColor;
     color: #fff;
+  }
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 14.98px;
+  margin-bottom: 20px;
+}
+
+.sosial {
+  &-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    &:hover .sosial-icon,
+    :focus .sosial-icon {
+      fill: $subColor;
+    }
+  }
+  &-icon {
+    width: 20px;
+    height: 20px;
   }
 }

@@ -1,0 +1,41 @@
+.booking {
+  background-color: #191c26;
+  color: $textColor;
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    margin-bottom: 44px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+  &__field {
+    background-color: inherit;
+    padding-bottom: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $textColorInherit;
+    color: #fff;
+    &:hover::placeholder {
+      color: #fff;
+    }
+    &:hover {
+      border-color: #fff;
+    }
+  }
+  &__message {
+    height: 76px;
+    resize: none;
+  }
+  & .btn {
+    margin: 0 auto;
+  }
+}

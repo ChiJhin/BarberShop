@@ -44,6 +44,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 h1,
@@ -98,10 +99,6 @@ button {
   padding-bottom: 42px;
 }
 
-.border {
-  outline: 1px solid tomato;
-}
-
 .section-line {
   display: block;
   height: 1px;
@@ -123,7 +120,7 @@ button {
   display: block;
   text-align: center;
   padding: 12px 20px;
-  max-width: 160px;
+  width: 160px;
   height: 40px;
   font-size: 12px;
   font-weight: 600;
@@ -141,6 +138,40 @@ button {
 .btn:hover {
   background-color: #ff6c00;
   color: #fff;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 14.98px;
+  margin-bottom: 20px;
+}
+
+.sosial-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.sosial-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.sosial-item:hover .sosial-icon,
+.sosial-item :focus .sosial-icon {
+  fill: #ff6c00;
+}
+.sosial-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .logo {
@@ -164,7 +195,7 @@ button {
   width: 100%;
   height: 100%;
   visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2784313725);
   overflow-y: hidden;
 }
@@ -183,9 +214,45 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid black;
   background-color: #fff;
-  padding: 50px 31px;
+  padding: 50px 40px;
+}
+.header__modal-nav {
+  margin-bottom: 64px;
+}
+.header__modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.header__modal-item {
+  font-size: 18px;
+  font-weight: 600;
+}
+.header__modal-item a:hover,
+.header__modal-item a:focus {
+  color: #ff6c00;
+}
+.header__modal-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin-bottom: 69px;
+}
+.header__modal a {
+  font-size: 18px;
+  font-weight: 600;
+  width: auto;
+  color: #000;
+}
+.header__modal a:hover {
+  color: #ff6c00;
+}
+.header__modal a:focus {
+  color: #ff6c00;
 }
 .header__modal-btn {
+  position: relative;
+  right: -10px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -193,6 +260,7 @@ button {
   justify-content: center;
   background-color: inherit;
   margin-left: auto;
+  margin-bottom: 30px;
 }
 .header__modal-btn:hover {
   scale: 1.1;
@@ -205,6 +273,18 @@ button {
 .header__modal-box {
   max-width: 400px;
 }
+.header__modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 168px;
+}
+.header__modal-footer a {
+  font-size: 14px;
+  font-weight: 600;
+}
 
 .header {
   position: relative;
@@ -214,8 +294,13 @@ button {
   background-size: cover;
   padding-top: 40px;
 }
+.header__subtitle {
+  color: rgba(157, 164, 189, 0.6);
+  letter-spacing: 0.09em;
+  margin-bottom: 0;
+}
 .header__main {
-  width: 320px;
+  width: 322px;
   margin-top: 112px;
   display: flex;
   flex-direction: column;
@@ -223,15 +308,10 @@ button {
   gap: 20px;
 }
 .header__main-text {
-  display: flex;
-  align-items: center;
-  gap: 20px;
   color: #9da4bd;
   font-weight: 400;
   font-size: 16px;
-}
-.header__main-text--inherit {
-  color: rgba(157, 164, 189, 0.6);
+  line-height: 26px;
 }
 .header__main-title {
   font-weight: 700;
@@ -275,11 +355,6 @@ button {
   }
 }
 
-.barbers__prifile-icon {
-  width: 20px;
-  height: 20px;
-}
-
 .about {
   display: flex;
   flex-direction: column;
@@ -290,6 +365,9 @@ button {
   flex-direction: column;
   gap: 20px;
 }
+.about__main .subtitle {
+  margin-bottom: 0;
+}
 .about__images {
   display: none;
 }
@@ -298,19 +376,11 @@ button {
     display: block;
   }
 }
-.about__sub-title {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
-}
 .about__title {
   max-width: 306px;
+  font-family: "Raleway", sans-serif;
   font-size: 28px;
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
 }
 .about__text {
   font-size: 16px;
@@ -333,15 +403,6 @@ button {
   background-color: #111319;
   padding: 84px 31px;
   height: 100%;
-}
-.services__sub-title {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
 .services__title {
   font-size: 40px;
@@ -372,25 +433,19 @@ main #services {
   padding: 0;
 }
 
-.why__subtitle {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
-}
 .why__title {
   font-family: "Raleway", sans-serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0.048em;
+  margin-bottom: 20px;
 }
 .why__text {
   font-size: 18px;
   color: #555555;
   line-height: 30px;
   letter-spacing: 0.018em;
+  margin-bottom: 44px;
 }
 .why__list {
   display: flex;
@@ -427,4 +482,170 @@ main #services {
   font-weight: 600;
   text-align: center;
   margin-top: 6px;
+}
+
+.barbers {
+  background-color: #f7f7f7;
+}
+.barbers__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 14.98px;
+}
+.barbers__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 44px;
+}
+.barbers__list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.barbers__prifile-image {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.barbers__prifile-name {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.barbers__prifile-position {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #ff6c00;
+  margin-bottom: 30px;
+}
+
+.portfolio .subtitle {
+  margin-bottom: 71px;
+}
+.portfolio__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.portfolio__image {
+  width: 100%;
+}
+
+.booking {
+  background-color: #191c26;
+  color: #9da4bd;
+}
+.booking__title {
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  margin-bottom: 44px;
+}
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.booking__field {
+  background-color: inherit;
+  padding-bottom: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+  color: #fff;
+}
+.booking__field:hover::-moz-placeholder {
+  color: #fff;
+}
+.booking__field:hover::placeholder {
+  color: #fff;
+}
+.booking__field:hover {
+  border-color: #fff;
+}
+.booking__message {
+  height: 76px;
+  resize: none;
+}
+.booking .btn {
+  margin: 0 auto;
+}
+
+.contacts {
+  color: #9da4bd;
+  background-image: url("../images/contacts-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts .subtitle {
+  color: #fff;
+}
+.contacts__wrapper {
+  opacity: 90%;
+  background-color: #191c26;
+  padding: 84px 31px;
+  height: 100%;
+}
+.contacts__title {
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  margin-bottom: 40px;
+}
+.contacts__list {
+  margin-bottom: 44px;
+}
+.contacts__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts__link {
+  text-decoration: underline;
+}
+.contacts__text {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.contacts__text--bold {
+  font-weight: 700;
+}
+
+main #contacts {
+  padding: 0;
+}
+
+.footer {
+  background-color: #f7f7f7;
+}
+.footer__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 270px;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.footer__link {
+  font-size: 11px;
+  font-weight: 600;
+}
+.footer__copyright {
+  color: #9da4bd;
+  font-size: 11px;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

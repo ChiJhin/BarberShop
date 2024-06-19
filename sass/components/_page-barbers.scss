@@ -1,4 +1,43 @@
-.barbers__prifile-icon {
-  width: 20px;
-  height: 20px;
+.barbers {
+  background-color: #f7f7f7;
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 14.98px;
+  }
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 44px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  &__prifile {
+    &-image {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &-name {
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    &-position {
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: $subColor;
+      margin-bottom: 30px;
+    }
+  }
 }
