@@ -312,13 +312,21 @@ button {
   background-position: right;
   padding-top: 40px;
 }
+.header__nav-wrap {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-wrap {
+    display: block;
+  }
+}
 .header__subtitle {
   color: rgba(157, 164, 189, 0.6);
   letter-spacing: 0.09em;
   margin-bottom: 0;
 }
 .header__main {
-  width: 322px;
+  max-width: 322px;
   margin-top: 112px;
   display: flex;
   flex-direction: column;
@@ -343,6 +351,11 @@ button {
   justify-content: center;
   background-color: inherit;
 }
+@media screen and (min-width: 768px) {
+  .header__mobile-btn {
+    display: none;
+  }
+}
 .header__mobile-btn:hover {
   scale: 1.1;
 }
@@ -357,10 +370,14 @@ button {
   align-items: center;
 }
 .header__logo {
-  fill: black;
-}
-.header__logo-mobile {
   fill: #fff;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    position: absolute;
+    top: 40px;
+    fill: #000;
+  }
 }
 @media screen and (min-width: 480px) {
   .header {
@@ -431,8 +448,13 @@ button {
 }
 .services__price-list {
   background-image: linear-gradient(black, #171a24, rgba(23, 26, 36, 0.6823529412));
-  padding: 30px 40px;
+  padding: 15px 0;
   margin-bottom: 44px;
+}
+@media screen and (min-width: 480px) {
+  .services__price-list {
+    padding: 30px 40px;
+  }
 }
 .services__price-item {
   display: flex;

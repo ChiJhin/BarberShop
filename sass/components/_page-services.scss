@@ -21,8 +21,11 @@
   }
   &__price-list {
     background-image: linear-gradient(black, #171a24, #171a24ae);
-    padding: 30px 40px;
+    padding: 15px 0;
     margin-bottom: 44px;
+    @include min-mobile {
+      padding: 30px 40px;
+    }
   }
 
   &__price-item {

@@ -6,13 +6,19 @@
   background-size: cover;
   background-position: right;
   padding-top: 40px;
+  &__nav-wrap {
+    display: none;
+    @include min-tablet {
+      display: block;
+    }
+  }
   &__subtitle {
     color: $textColorInherit;
     letter-spacing: 0.09em;
     margin-bottom: 0;
   }
   &__main {
-    width: 322px;
+    max-width: 322px;
     margin-top: 112px;
     display: flex;
     flex-direction: column;
@@ -31,6 +37,9 @@
   }
 
   &__mobile-btn {
+    @include min-tablet {
+      display: none;
+    }
     width: 40px;
     height: 40px;
     display: flex;
@@ -52,9 +61,11 @@
     align-items: center;
   }
   &__logo {
-    fill: black;
-    &-mobile {
-      fill: #fff;
+    fill: #fff;
+    @include min-tablet {
+      position: absolute;
+      top: 40px;
+      fill: #000;
     }
   }
 
