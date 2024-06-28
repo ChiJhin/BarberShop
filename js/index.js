@@ -55,10 +55,8 @@ menuClose.addEventListener('click', onClose);
 const imgArray = ['../images/slider-3.jpg', '../images/slider-1.jpg', '../images/slider-2.png'];
 const sliderBtn = document.querySelectorAll('.slider__btn');
 const slider = document.querySelector('.hero__content');
-
+slider.style.backgroundImage = `url(${imgArray[0]})`;
 if (screen.width > 768) {
-  slider.style.backgroundImage = `url(${imgArray[0]})`;
-
   let i = 1;
   setInterval(() => {
     slider.style.backgroundImage = `url(${imgArray[i++]})`;
