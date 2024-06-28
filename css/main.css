@@ -390,7 +390,6 @@ button {
   }
 }
 .hero__content {
-  position: relative;
   height: 580px;
   width: 100%;
   color: #fff;
@@ -399,7 +398,30 @@ button {
   background-position: right;
   padding: 31px;
   padding-right: 0;
-  transition: background-image 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: 30s 250ms infinite mymove;
+}
+@keyframes mymove {
+  0% {
+    background-image: url("../images/slider-3.jpg");
+  }
+  30% {
+    background-image: url("../images/slider-3.jpg");
+  }
+  33% {
+    background-image: url("../images/slider-1.jpg");
+  }
+  63% {
+    background-image: url("../images/slider-1.jpg");
+  }
+  66% {
+    background-image: url("../images/slider-2.jpg");
+  }
+  97% {
+    background-image: url("../images/slider-2.jpg");
+  }
+  100% {
+    background-image: url("../images/slider-3.jpg");
+  }
 }
 @media screen and (min-width: 768px) {
   .hero__content {
