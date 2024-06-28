@@ -17,6 +17,10 @@
     @include min-mobile {
       width: calc(100% - 62px);
     }
+    @include min-tablet {
+      padding: 0;
+      z-index: 1;
+    }
     &-btn {
       @include min-tablet {
         display: none;

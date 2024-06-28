@@ -90,12 +90,8 @@ button {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding: 120px 15px;
   }
-}
-
-.footer.container {
-  padding-top: 42px;
-  padding-bottom: 42px;
 }
 
 .section-line {
@@ -320,6 +316,12 @@ button {
     width: calc(100% - 62px);
   }
 }
+@media screen and (min-width: 768px) {
+  .header__mobile {
+    padding: 0;
+    z-index: 1;
+  }
+}
 .header__mobile-btn {
   width: 40px;
   height: 40px;
@@ -403,6 +405,12 @@ button {
     width: 573px;
   }
 }
+@media screen and (min-width: 768px) {
+  .hero__content {
+    background-position: center;
+    width: 100%;
+  }
+}
 .hero__navigation {
   display: none;
 }
@@ -413,6 +421,8 @@ button {
     width: 95%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    z-index: 700;
   }
 }
 .hero__nav-list {
@@ -430,6 +440,11 @@ button {
   flex-direction: column-reverse;
   align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__nav-aside {
+    flex-direction: row;
+  }
 }
 .hero__discription {
   display: flex;
@@ -476,6 +491,11 @@ button {
     gap: 30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .about__main {
+    width: 470px;
+  }
+}
 .about__main .subtitle {
   margin-bottom: 0;
 }
@@ -485,6 +505,11 @@ button {
 @media screen and (min-width: 768px) {
   .about__main .btn {
     margin-top: 53px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__main .btn {
+    margin-top: 43px;
   }
 }
 .about__images {
@@ -497,8 +522,21 @@ button {
     gap: 30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .about__images {
+    flex-direction: row;
+  }
+}
 .about__img {
   width: 330px;
+}
+@media screen and (min-width: 1200px) {
+  .about__img {
+    width: 270px;
+    height: 445px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .about__title {
   max-width: 306px;
@@ -544,6 +582,25 @@ button {
     padding: 30px 40px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .services__price-list {
+    display: none;
+  }
+}
+.services__price-desktop {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .services__price-desktop {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .services__price-desktop .services__price-list {
+    display: block;
+    width: 570px;
+  }
+}
 .services__price-item {
   display: flex;
   justify-content: space-between;
@@ -566,6 +623,15 @@ main #services {
     display: flex;
     flex-wrap: wrap;
   }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .why {
+    flex-direction: row-reverse;
+    gap: 130px;
+  }
+}
+.why.container {
+  padding-bottom: 150px;
 }
 @media screen and (min-width: 768px) {
   .why__wrap {
@@ -643,7 +709,7 @@ main #services {
 .barbers {
   background-color: #f7f7f7;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .barbers .container {
     width: 450px;
   }
@@ -673,6 +739,12 @@ main #services {
     width: 450px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .barbers__list {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
 .barbers__prifile-image {
   width: 100%;
   margin-bottom: 30px;
@@ -680,6 +752,11 @@ main #services {
 @media screen and (min-width: 768px) {
   .barbers__prifile-image {
     width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .barbers__prifile-image {
+    width: 370px;
   }
 }
 .barbers__prifile-name {
@@ -718,10 +795,28 @@ main #services {
     width: 330px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .portfolio__image {
+    width: 270px;
+    height: 360px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 
 .booking {
   background-color: #191c26;
   color: #9da4bd;
+}
+@media screen and (min-width: 1200px) {
+  .booking {
+    display: flex;
+    justify-content: center;
+  }
+  .booking .container {
+    max-width: 600px;
+    margin: 0;
+  }
 }
 .booking__title {
   color: #fff;
@@ -860,12 +955,17 @@ main #contacts {
 .footer {
   background-color: #f7f7f7;
 }
+.footer .container {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
 @media screen and (min-width: 768px) {
-  .footer {
+  .footer .container {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    padding: 56px 31px;
   }
 }
 .footer__list {

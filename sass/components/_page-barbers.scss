@@ -1,7 +1,7 @@
 .barbers {
   background-color: #f7f7f7;
   & .container {
-    @include min-tablet {
+    @media screen and (max-width: 1199px) {
       width: 450px;
     }
   }
@@ -28,6 +28,10 @@
     @include min-tablet {
       width: 450px;
     }
+    @include min-desktop {
+      flex-direction: row;
+      gap: 30px;
+    }
   }
   &__prifile {
     &-image {
@@ -35,6 +39,9 @@
       margin-bottom: 30px;
       @include min-tablet {
         width: 450px;
+      }
+      @include min-desktop {
+        width: 370px;
       }
     }
     &-name {

@@ -2,6 +2,13 @@
   @include min-tablet {
     display: flex;
     flex-wrap: wrap;
+    @include min-desktop {
+      flex-direction: row-reverse;
+      gap: 130px;
+    }
+  }
+  &.container {
+    padding-bottom: 150px;
   }
   &__wrap {
     @include min-tablet {

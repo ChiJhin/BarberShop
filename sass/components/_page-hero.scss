@@ -47,6 +47,10 @@
       background-position: center;
       width: 573px;
     }
+    @include min-tablet {
+      background-position: center;
+      width: 100%;
+    }
   }
   &__navigation {
     display: none;
@@ -56,6 +60,8 @@
       width: 95%;
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
+      z-index: 700;
     }
   }
   &__nav {
@@ -76,6 +82,9 @@
       flex-direction: column-reverse;
       align-items: center;
       gap: 20px;
+      @include min-desktop {
+        flex-direction: row;
+      }
     }
   }
   &__discription {

@@ -13,12 +13,8 @@
   }
   @include min-desktop {
     width: 1200px;
+    padding: 120px 15px;
   }
-}
-
-.footer.container {
-  padding-top: 42px;
-  padding-bottom: 42px;
 }
 
 .border {

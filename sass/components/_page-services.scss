@@ -25,6 +25,22 @@
     @include min-mobile {
       padding: 30px 40px;
     }
+    @include min-desktop {
+      display: none;
+    }
+  }
+
+  &__price-desktop {
+    display: none;
+    @include min-desktop {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      & .services__price-list {
+        display: block;
+        width: 570px;
+      }
+    }
   }
 
   &__price-item {

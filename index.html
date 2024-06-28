@@ -139,10 +139,20 @@
       <section id="about" class="about border container">
         <ul class="about__images">
           <li>
-            <img class="about__img" src="./images/about/about1-mob.jpg" alt="Beard shave" />
+            <img
+              class="about__img"
+              srcset="./images/about/about1-mob.jpg 1x, ./images/about/about1-mob@2x.jpg 2x"
+              src="./images/about/about1-mob.jpg"
+              alt="Beard shave"
+            />
           </li>
           <li>
-            <img class="about__img" src="./images/about/about2-mob.jpg" alt="Hair cut" />
+            <img
+              class="about__img"
+              srcset="./images/about/about2-mob.jpg 1x, ./images/about/about2-mob@2x.jpg 2x"
+              src="./images/about/about2-mob.jpg"
+              alt="Hair cut"
+            />
           </li>
         </ul>
         <div class="about__main">
@@ -210,6 +220,52 @@
                 <p>from 200 uah.</p>
               </li>
             </ul>
+            <div class="services__price-desktop">
+              <ul class="services__price-list">
+                <li class="services__price-item">
+                  <p>Men’s haircut</p>
+                  <span class="line"></span>
+                  <p>from 300 uah.</p>
+                </li>
+                <li class="services__price-item">
+                  <p>Beard trim</p>
+                  <span class="line"></span>
+                  <p>from 200 uah.</p>
+                </li>
+                <li class="services__price-item">
+                  <p>Mustache trim</p>
+                  <span class="line"></span>
+                  <p>from 200 uah.</p>
+                </li>
+                <li class="services__price-item">
+                  <p>Straight razor shave</p>
+                  <span class="line"></span>
+                  <p>from 200 uah.</p>
+                </li>
+              </ul>
+              <ul class="services__price-list">
+                <li class="services__price-item">
+                  <p>Trainee’s haircut</p>
+                  <span class="line"></span>
+                  <p>from 50 uah.</p>
+                </li>
+                <li class="services__price-item">
+                  <p>Haircut under the nozzle</p>
+                  <span class="line"></span>
+                  <p>from 200 uah.</p>
+                </li>
+                <li class="services__price-item">
+                  <p>Children’s haircut (0-12 y.o.)</p>
+                  <span class="line"></span>
+                  <p>from 300 uah.</p>
+                </li>
+                <li class="services__price-item">
+                  <p>Camouflage of grey hair</p>
+                  <span class="line"></span>
+                  <p>from 200 uah.</p>
+                </li>
+              </ul>
+            </div>
             <a class="btn btn--light" href="#booking">online-booking</a>
           </div>
         </div>
@@ -473,13 +529,15 @@
         </div>
       </section>
     </main>
-    <footer id="footer" class="footer border container">
-      <ul class="footer__list">
-        <li><span class="section-line footer__link"></span></li>
-        <li><a class="footer__link" href="#">Instagram</a></li>
-        <li><a class="footer__link" href="#">Youtube</a></li>
-      </ul>
-      <p class="footer__copyright">&#169;Copyright 2020</p>
+    <footer id="footer" class="footer border">
+      <div class="container">
+        <ul class="footer__list">
+          <li><span class="section-line footer__link"></span></li>
+          <li><a class="footer__link" href="#">Instagram</a></li>
+          <li><a class="footer__link" href="#">Youtube</a></li>
+        </ul>
+        <p class="footer__copyright">&#169;Copyright 2020</p>
+      </div>
     </footer>
   </body>
   <script src="./js/index.js"></script>

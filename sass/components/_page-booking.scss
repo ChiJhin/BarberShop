@@ -1,6 +1,15 @@
 .booking {
   background-color: #191c26;
   color: $textColor;
+  @include min-desktop {
+    display: flex;
+    justify-content: center;
+
+    & .container {
+      max-width: 600px;
+      margin: 0;
+    }
+  }
   &__title {
     color: #fff;
     text-align: center;

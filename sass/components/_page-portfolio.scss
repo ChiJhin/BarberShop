@@ -16,5 +16,10 @@
     @include min-tablet {
       width: 330px;
     }
+    @include min-desktop {
+      width: 270px;
+      height: 360px;
+      object-fit: cover;
+    }
   }
 }
