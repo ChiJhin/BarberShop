@@ -6,8 +6,15 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include min-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   &__image {
     width: 100%;
+    @include min-tablet {
+      width: 330px;
+    }
   }
 }

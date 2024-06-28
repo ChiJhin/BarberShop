@@ -1,4 +1,13 @@
 .why {
+  @include min-tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__wrap {
+    @include min-tablet {
+      width: 500px;
+    }
+  }
   &__title {
     font-family: 'Raleway', sans-serif;
     font-size: 42px;
@@ -16,13 +25,16 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    max-width: 618px;
+    max-width: 418px;
     @media screen and (max-width: 479px) {
       flex-wrap: nowrap;
       flex-direction: column;
       gap: 30px;
       margin: auto;
       width: 193px;
+    }
+    @include min-tablet {
+      margin-left: auto;
     }
   }
   &__item {

@@ -1,5 +1,11 @@
 .footer {
   background-color: #f7f7f7;
+  @include min-tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -7,6 +13,9 @@
     max-width: 270px;
     margin-left: auto;
     margin-bottom: 20px;
+    @include min-tablet {
+      margin: 0;
+    }
   }
   &__link {
     font-size: 11px;

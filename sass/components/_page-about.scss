@@ -2,19 +2,38 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @include min-tablet {
+    flex-direction: row;
+    gap: 30px;
+  }
   &__main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include min-tablet {
+      gap: 30px;
+    }
     & .subtitle {
       margin-bottom: 0;
+    }
+    & .btn {
+      margin-top: 20px;
+      @include min-tablet {
+        margin-top: 53px;
+      }
     }
   }
   &__images {
     display: none;
     @include min-tablet {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
+  }
+
+  &__img {
+    width: 330px;
   }
 
   &__title {

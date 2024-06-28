@@ -1,78 +1,46 @@
 .header {
   position: relative;
-  height: 580px;
-  color: #fff;
-  background-image: url('../images/slider-3.jpg');
-  background-size: cover;
-  background-position: right;
-  padding-top: 40px;
-  &__nav-wrap {
-    display: none;
-    @include min-tablet {
-      display: block;
-    }
-  }
-  &__subtitle {
-    color: $textColorInherit;
-    letter-spacing: 0.09em;
-    margin-bottom: 0;
-  }
-  &__main {
-    max-width: 322px;
-    margin-top: 112px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 20px;
-    &-text {
-      color: $textColor;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 26px;
-    }
-    &-title {
-      font-weight: 700;
-      font-size: 48px;
-    }
-  }
-
-  &__mobile-btn {
-    @include min-tablet {
-      display: none;
-    }
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: inherit;
-    &:hover {
-      scale: 1.1;
-    }
-    &-icon {
-      width: 35px;
-      height: 35px;
-      fill: #fff;
-    }
+  top: 40px;
+  z-index: 700;
+  & .container {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   &__mobile {
+    position: absolute;
+    width: 98%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 31px;
+    @include min-mobile {
+      width: calc(100% - 62px);
+    }
+    &-btn {
+      @include min-tablet {
+        display: none;
+      }
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: inherit;
+      &:hover {
+        scale: 1.1;
+      }
+      &-icon {
+        width: 35px;
+        height: 35px;
+        fill: #fff;
+      }
+    }
   }
   &__logo {
     fill: #fff;
     @include min-tablet {
-      position: absolute;
-      top: 40px;
       fill: #000;
     }
-  }
-
-  @include min-mobile {
-    background-position: 50% center;
-  }
-  @include min-tablet {
-    height: 680px;
   }
 }
