@@ -4,7 +4,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  & .container {
+    @include min-desktop {
+      padding-left: 105px;
+    }
+  }
   & .subtitle {
     color: #fff;
   }
@@ -28,6 +32,10 @@
   &__info {
     @include min-tablet {
       display: flex;
+      gap: 30px;
+    }
+    @include min-desktop {
+      flex-direction: column;
       gap: 30px;
     }
   }

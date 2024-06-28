@@ -4,7 +4,7 @@
   @include min-desktop {
     display: flex;
     justify-content: center;
-
+    height: 625px;
     & .container {
       max-width: 600px;
       margin: 0;
