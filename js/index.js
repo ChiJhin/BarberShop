@@ -52,16 +52,42 @@ function onEscKeyPress(event) {
 menuOpen.addEventListener('click', onOpen);
 menuClose.addEventListener('click', onClose);
 
+// <-------------Слайдер------------------>
 const imgArray = ['images/slider-3.jpg', 'images/slider-1.jpg', 'images/slider-2.jpg'];
 const slider = document.querySelector('.hero__content');
 
-slider.style.backgroundImage = `url(${imgArray[0]})`;
+let intervalId = null; // Змінна для збереження ID інтервалу
 
-if (screen.width > 768) {
+// Функція для запуску слайдера
+const startSlider = () => {
   let i = 1;
-  setInterval(() => {
+  slider.style.backgroundImage = `url(${imgArray[0]})`;
+  intervalId = setInterval(() => {
     slider.style.backgroundImage = `url(${imgArray[i++]})`;
-
     if (i === imgArray.length) i = 0;
   }, 9000);
-}
+};
+
+// Функція для очищення інтервалу
+const stopSlider = () => {
+  if (intervalId !== null) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+};
+
+// Функція для оновлення фону
+const updateSlider = () => {
+  if (window.innerWidth > 768) {
+    stopSlider();
+    startSlider();
+  } else {
+    stopSlider();
+    slider.style.backgroundImage = `url(${imgArray[0]})`;
+  }
+};
+
+updateSlider();
+
+// Додавання обробника для змін розміру вікна
+window.addEventListener('resize', updateSlider);
