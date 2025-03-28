@@ -38,13 +38,11 @@
     height: 580px;
     width: 100%;
     color: #fff;
-    background-image: url('../images/slider-3.jpg'), url('../images/slider-1.jpg'),
-      url('../images/slider-2.jpg');
     background-size: cover;
     background-position: right;
     padding: 31px;
     padding-right: 0;
-    transition: background-image 750ms $speed;
+    transition: background-image $time $speed;
 
     @include min-tablet {
       background-position: center;
@@ -124,25 +122,6 @@
     font-size: 30px;
     @media screen and (min-width: 350px) {
       font-size: 48px;
-    }
-  }
-}
-
-.slider {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 43px;
-  width: 18px;
-
-  &__btn {
-    display: block;
-    width: 12px;
-    height: 1px;
-    border-radius: 30px;
-    background-color: #fff;
-    &:hover {
-      width: 18px;
     }
   }
 }

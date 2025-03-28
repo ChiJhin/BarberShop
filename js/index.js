@@ -27,7 +27,6 @@ function onClose() {
 
 function onButton(evt) {
   if (evt.target.nodeName !== 'A') {
-    console.log(7);
     return;
   }
   onClose();
@@ -37,7 +36,6 @@ function onBackdrop(evt) {
   if (evt.target !== evt.currentTarget) {
     return;
   }
-  console.log(1);
   onClose();
 }
 
